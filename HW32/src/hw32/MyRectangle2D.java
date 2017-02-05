@@ -95,5 +95,10 @@ public class MyRectangle2D {
         return true;
     }
     
+    public boolean overlaps(MyRectangle2D r){
+        if(contains(r.getX() + r.getwidth(),r.getY() + r.getheight()) || contains(r.getX() - r.getwidth(),r.getY() + r.getheight()) || contains(r.getX() + r.getwidth(),r.getY() - r.getheight()) || contains(r.getX() - r.getwidth(),r.getY() - r.getheight()))
+            return true;
+        return false;
+    }
     
 }
